@@ -9,11 +9,11 @@
 ## Install
 
 ```
-ura install ura-math 0.1.1 https://github.com/mohammedhrima/ura-math
+ura install ura-math 0.1.0 https://github.com/mohammedhrima/ura-math
 ```
 
 It adds this line to your project's `ura.conf`:
 
 ```ura
-@dependency "ura-math" "0.1.1" "https://github.com/mohammedhrima/ura-math"
+@dependency "ura-math" "0.1.0" "https://github.com/mohammedhrima/ura-math"
 ```
