@@ -95,17 +95,10 @@ It adds this line to your project's `ura.conf`. Then `use "@/math"` in any file:
 
 ## How a call reaches libm
 
-```mermaid
-flowchart LR
-    A["main.ura<br/>sqrt(2.0)"]:::code --> B["math.ura<br/>proto sqrt(x f64) f64<br/>link &quot;m&quot;"]:::lib
-    B --> C["ura compiler<br/>finds libm.so"]:::step
-    C --> D["LLVM call<br/>double sqrt(double)"]:::step
-    D --> E["libm<br/>the C library"]:::native
-    classDef code fill:#4a5568,stroke:#2F74E8,color:#fff
-    classDef lib fill:#2F74E8,stroke:#2d3748,color:#fff
-    classDef step fill:#f4f8fb,stroke:#2F74E8,color:#1a202c
-    classDef native fill:#2d3748,stroke:#2F74E8,color:#fff
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/call-dark.svg">
+  <img src="assets/call-light.svg" alt="sqrt(2.0) in main.ura goes through the proto in math.ura, ura build finds libm, and the call lands in libm">
+</picture>
 
 - A `proto` declares a C function with ura types. `f64` is C's `double`, so the call needs no conversion.
 - `link "m"` asks the compiler to link libm. It finds `libm.so` (or `libm.dylib` on macOS) in the usual folders, or in `$URA_LIBC`.
@@ -149,17 +142,10 @@ flowchart LR
 
 ## The ura standard library
 
-```mermaid
-flowchart TD
-    P["your project<br/>ura.conf"]:::you --> C["ura-core<br/>Array, String, Range"]:::lib
-    P --> X["ura-posix<br/>files, sockets, time"]:::lib
-    P --> M["ura-math<br/>libm"]:::here
-    P --> G["ura-graphics<br/>SDL2, raylib, OpenGL"]:::lib
-    X --> M
-    classDef you fill:#4a5568,stroke:#2F74E8,color:#fff
-    classDef here fill:#2F74E8,stroke:#2d3748,color:#fff
-    classDef lib fill:#f4f8fb,stroke:#2F74E8,color:#1a202c
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ecosystem-dark.svg">
+  <img src="assets/ecosystem-light.svg" alt="A project depends on ura-core, ura-posix, ura-math and ura-graphics; ura-posix uses ura-math">
+</picture>
 
 | Repo | Version | What | Depends on |
 |---|---|---|---|
