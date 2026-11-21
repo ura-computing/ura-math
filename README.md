@@ -5,12 +5,12 @@
 <h1 align="center">ura-math</h1>
 
 <p align="center">
-  C's math library for <a href="https://github.com/mohammedhrima/ura-lang">ura</a>: trigonometry, powers, roots, logarithms, rounding.<br>
+  C's math library for <a href="https://github.com/ura-computing/ura-lang">ura</a>: trigonometry, powers, roots, logarithms, rounding.<br>
   Every function is a direct call into <code>libm</code>, with no wrapper in between.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.1.0-2F74E8" alt="version 0.1.0">
+  <img src="https://img.shields.io/badge/version-0.0.1-2F74E8" alt="version 0.0.1">
   <img src="https://img.shields.io/badge/ura-standard%20library-2F74E8" alt="ura standard library">
   <img src="https://img.shields.io/badge/links-libm-555" alt="links libm">
   <img src="https://img.shields.io/badge/functions-43-2F74E8" alt="43 functions">
@@ -84,13 +84,13 @@ distance from start: 0.000000
 ## Install
 
 ```
-ura install ura-math 0.1.0 https://github.com/mohammedhrima/ura-math
+ura install ura-math 0.0.1 https://github.com/ura-computing/ura-math
 ```
 
 It adds this line to your project's `ura.conf`. Then `use "@/math"` in any file:
 
 ```ura
-@dependency "ura-math" "0.1.0" "https://github.com/mohammedhrima/ura-math"
+@dependency "ura-math" "0.0.1" "https://github.com/ura-computing/ura-math"
 ```
 
 ## How a call reaches libm
@@ -149,13 +149,13 @@ It adds this line to your project's `ura.conf`. Then `use "@/math"` in any file:
 
 | Repo | Version | What | Depends on |
 |---|---|---|---|
-| [ura-core](https://github.com/mohammedhrima/ura-core) | 0.1.0 | Array, String, Range, Error, Os | nothing |
-| [ura-posix](https://github.com/mohammedhrima/ura-posix) | 0.1.0 | the C library and the OS | ura-math |
-| **ura-math** | 0.1.0 | C's math library | nothing |
-| [ura-graphics](https://github.com/mohammedhrima/ura-graphics) | 0.1.0 | SDL2, raylib, OpenGL | nothing |
+| [ura-core](https://github.com/ura-computing/ura-core) | 0.0.1 | Array, String, Range, Error, Os | nothing |
+| [ura-posix](https://github.com/ura-computing/ura-posix) | 0.0.1 | the C library and the OS | ura-math |
+| **ura-math** | 0.0.1 | C's math library | nothing |
+| [ura-graphics](https://github.com/ura-computing/ura-graphics) | 0.0.1 | SDL2, raylib, OpenGL | nothing |
 
 ---
 
 <p align="center">
-  Part of <a href="https://github.com/mohammedhrima/ura-lang">ura-lang</a>
+  Part of <a href="https://github.com/ura-computing/ura-lang">ura-lang</a>
 </p>
