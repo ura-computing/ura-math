@@ -21,7 +21,7 @@
 ## At a glance
 
 ```ura
-use "@/ura-math"
+use "@/math"
 
 PI f64 = 3.14159265358979
 
@@ -87,7 +87,7 @@ distance from start: 0.000000
 ura install ura-math 0.0.1 https://github.com/ura-computing/ura-math
 ```
 
-It adds this line to your project's `ura.conf`. Then `use "@/ura-math"` in any file:
+It adds this line to your project's `ura.conf`. Then `use "@/math"` in any file:
 
 ```ura
 @dependency "ura-math" "0.0.1" "https://github.com/ura-computing/ura-math"
