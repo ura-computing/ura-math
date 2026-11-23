@@ -84,13 +84,15 @@ distance from start: 0.000000
 ## Install
 
 ```
-ura install ura-math 0.0.1 https://github.com/ura-computing/ura-math
+ura deps add math@0.0.1
 ```
 
-It adds this line to your project's `ura.conf`. Then `use "@/math"` in any file:
+It adds this block to your project's `ura.conf`. Then `use "@/math"` in any file:
 
 ```ura
-@dependency "ura-math" "0.0.1" "https://github.com/ura-computing/ura-math"
+@dep "math":
+    @url "https://github.com/ura-computing/ura-math"
+    @version "0.0.1"
 ```
 
 ## How a call reaches libm
